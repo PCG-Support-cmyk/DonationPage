@@ -1,0 +1,120 @@
+<link rel="stylesheet" href="css/auction.css">
+<!-- WELCOME INTRO ANIMATION -->
+<div id="welcome-screen">
+    <h1>W E L C O M E</h1>
+</div>
+
+<main class="container">
+
+    <section class="hero">
+        <small>SIP'N'SEE AUCTION ITEMS</small>
+        <h1>Discover At Your Own Pace</h1>
+        <p>Click on an item to read more, then enter a number and hit "Place Bid"</p>
+    </section>
+
+    <input
+        type="text"
+        class="search"
+        id="search"
+        placeholder="Search the collection..."
+    >
+
+    <div class="filters">
+        <button class="active" data-category="All Items">All Items</button>
+        <button data-category="Home & Living">Home & Living</button>
+        <button data-category="Accessories">Accessories</button>
+        <button data-category="Kitchen">Kitchen</button>
+        <button data-category="Electronics">Electronics</button>
+    </div>
+
+    <div class="section-heading">
+        <h2>Available Items</h2>
+        <span id="product-count">6 products</span>
+    </div>
+
+    <div class="product-grid" id="product-grid"></div>
+
+    <div class="no-results" id="no-results">
+        No matching products found.
+    </div>
+
+</main>
+
+<!-- PRODUCT INFORMATION OVERLAY -->
+
+<div class="overlay" id="overlay">
+
+    <div class="modal">
+
+        <button class="close-btn" onclick="closeModal();">
+            ×
+        </button>
+
+        <div class="modal-content">
+
+            <!-- Product Information -->
+
+            <div class="category" id="modal-category"></div>
+
+            <h2 id="modal-name"></h2>
+
+            <h4>Product Information</h4>
+
+            <p class="description" id="modal-description"></p>
+
+
+            <!-- Bidding Interface -->
+
+            <div class="bidding-section">
+
+                <h3>Current Highest Bid</h3>
+
+                <div id="highest-bid">
+                    Loading...
+                </div>
+
+                <form id="bid-form">
+
+                    <input
+                        type="text"
+                        id="bidder-name"
+                        placeholder="Your name"
+                        maxlength="50"
+                        required
+                    >
+
+                    <input
+                        type="number"
+                        id="bid-amount"
+                        placeholder="Enter your bid"
+                        min="0.01"
+                        step="0.01"
+                        required
+                    >
+
+                    <button type="submit">
+                        Place Bid
+                    </button>
+
+                </form>
+
+                <h3>Bid History</h3>
+
+                <div id="bid-history">
+                    Loading bids...
+                </div>
+
+            </div>
+
+
+            <!-- Other Actions -->
+
+            <button class="continue-btn" onclick="closeModal();">
+                Continue Browsing
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
