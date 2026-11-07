@@ -109,7 +109,7 @@ function homeScript() {
     console.log("Home page loaded");
 
     //OPEN THE DONATE PAGE
-    loadPage('donate')
+    loadPage('auction')
 }
 
 
